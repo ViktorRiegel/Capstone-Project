@@ -2,16 +2,26 @@
 
 <h1>Hello to my post table</h1>
 
-<div>
+<form action="/post" method="POST" class="buttons">
   <ul>
     <li>
-      <div>
-        <a href="/view">First post</a>
-        <button>-</button>
-        <button>Edit</button>
-      </div>
+      <button type="submit" value="post1" name="posts">Post-1</button>
+    </li>
+    <li>
+      <button type="submit" value="post2" name="posts">Post-2</button>
     </li>
   </ul>
+</form>
+
+<div class="hidden">
+  <% if(locals.post) { %>
+
+  <h2><%= post.name %></h2>
+
+  <p><%= post.content %></p>
+  <% } else { %>
+  <h2>Pick your Post</h2>
+  <% } %>
 </div>
 
 <%- include('partials/footer.ejs') %>

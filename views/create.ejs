@@ -1,9 +1,9 @@
 <%- include('partials/header.ejs') %>
 
-<form action="/submit" method="POST">
-  <input type="text" name="PostName" placeholder="Title" />
-  <input type="text" name="PostContent" placeholder="Content" />
-  <input type="submit" value="OK" />
+<form action="/submit" method="POST" class="buttons">
+  <input type="submit" value="pName" name="post" placeholder="Title" />
+  <input type="submit" value="pContent" name="post" placeholder="Content" />
+  <input type="submit" value="Create" />
 </form>
 
 <%- include('partials/footer.ejs') %>
